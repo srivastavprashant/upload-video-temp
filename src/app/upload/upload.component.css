@@ -1,0 +1,36 @@
+.upload-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .upload-card {
+    max-width: 600px;
+    width: 100%;
+  }
+  .upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .upload-area.dragging {
+    border-color: #2196F3;
+    background: rgba(33, 150, 243, 0.1);
+  }
+  .upload-area mat-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+  .progress-section {
+    margin-top: 20px;
+  }
+  .progress-section span {
+    margin-top: 8px;
+    display: block;
+    text-align: center;
+  }

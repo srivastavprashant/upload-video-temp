@@ -1,0 +1,28 @@
+<div class="upload-container">
+  <mat-card class="upload-card">
+    <mat-card-header>
+      <mat-card-title>Upload Video</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="upload-area" 
+           (dragover)="onDragOver($event)" 
+           (drop)="onDrop($event)"
+           [class.dragging]="isDragging">
+        <mat-icon>cloud_upload</mat-icon>
+        <p>Drag and drop video here or</p>
+        <button mat-raised-button color="primary" (click)="fileInput.click()">
+          Select File
+        </button>
+        <input #fileInput type="file" 
+               (change)="onFileSelected($event)"
+               accept="video/*" 
+               style="display: none">
+      </div>
+      <div *ngIf="uploadProgress > 0" class="progress-section">
+        <mat-progress-bar mode="determinate" [value]="uploadProgress">
+        </mat-progress-bar>
+        <span>{{ uploadProgress }}%</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
